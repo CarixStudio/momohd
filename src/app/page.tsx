@@ -2,12 +2,17 @@ import Image from "next/image";
 import  "./globals.css";
 import './home.css';
 
+const showDrawer = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    console.log("Drawer opened"); // Replace with actual drawer logic
+  };
+  
 export default function Home () {
   return (
   <>
   <div data-nosnippet="" className="osano-cm-window" dir="ltr">
     {/**/}
-    <div hidden="" className="osano-visually-hidden">
+    <div hidden={true} className="osano-visually-hidden">
       <span id="osano-cm-aria.newWindow">Opens in a new window</span>
       <span id="osano-cm-aria.external">Opens an external website</span>
       <span id="osano-cm-aria.externalNewWindow">
@@ -213,7 +218,9 @@ export default function Home () {
           data-login-with-shop-sign-in="true"
           className="Form"
           data-original-action="/account/login"
-          onsubmit="return false;"
+          onSubmit={(e) => {
+          e.preventDefault();
+          }}
         >
           <input type="hidden" name="form_type" defaultValue="customer_login" />
           <input type="hidden" name="utf8" defaultValue="✓" />
@@ -228,7 +235,7 @@ export default function Home () {
             placeholder="Email"
             autoCorrect="off"
             autoCapitalize="off"
-            autofocus=""
+            autoFocus= {true}
           />
           <label htmlFor="CustomerPassword" className="u-vhide">
             Password
@@ -3715,7 +3722,7 @@ export default function Home () {
                   x="0px"
                   y="0px"
                   viewBox="0 0 17.6 18.9"
-                  style={{ enableBackground: "new 0 0 17.6 18.9" }}
+                  enableBackground="new 0 0 17.6 18.9"
                   xmlSpace="preserve"
                 >
                   <path
@@ -3765,7 +3772,7 @@ export default function Home () {
                   x="0px"
                   y="0px"
                   viewBox="0 0 21.3 19.3"
-                  style={{ enableBackground: "new 0 0 21.3 19.3" }}
+                  enableBackground="new 0 0 21.3 19.3"
                   xmlSpace="preserve"
                 >
                   <path
@@ -7079,10 +7086,10 @@ export default function Home () {
                 <div className="u-hideMd">
                   <div className="u-hideMd">
                     <video
-                      autoPlay="autoplay"
-                      playsInline=""
-                      loop="true"
-                      muted=""
+                      autoPlay= {true}
+                      playsInline= {true}
+                      loop= {true}
+                      muted= {true}
                       className="regular-video js-mobile"
                       width="100%"
                       height="100%"
@@ -7197,10 +7204,10 @@ export default function Home () {
                 </div>
                 <div className="Hero-desktop-media u-showMd">
                   <video
-                    autoPlay="autoplay"
-                    playsInline=""
-                    loop="true"
-                    muted=""
+                    autoPlay= {true}
+                    playsInline= {true}
+                    loop= {true}
+                    muted= {true} 
                     src="assets/VIDEO-2025-10-15-21-39-13 (1).mp4"
                     aria-hidden="true"
                   />
@@ -7710,7 +7717,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8969242116334}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                          onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -7837,7 +7847,10 @@ export default function Home () {
                         data-productid={8969242116334}
                         data-product-id={8969242116334}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                        onSubmit={(e) => {
+                          e.preventDefault();
+                          return false; // optional, e.preventDefault() already stops submission
+                        }}
                       >
                         <input
                           type="hidden"
@@ -8329,13 +8342,17 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8957724655854}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
-                          <input
+                         <input
                             type="hidden"
                             name="form_type"
                             defaultValue="product"
                           />
+
                           <input type="hidden" name="utf8" defaultValue="✓" />
                           <input
                             type="hidden"
@@ -8456,7 +8473,10 @@ export default function Home () {
                         data-productid={8957724655854}
                         data-product-id={8957724655854}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -9061,7 +9081,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8070391660782}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -9183,7 +9206,10 @@ export default function Home () {
                         data-productid={8070391660782}
                         data-product-id={8070391660782}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -9842,7 +9868,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8858064388334}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -10263,7 +10292,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8278470295790}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -10797,7 +10829,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8668861104366}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -10919,7 +10954,10 @@ export default function Home () {
                         data-productid={8668861104366}
                         data-product-id={8668861104366}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -11578,7 +11616,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8930938978542}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -11706,7 +11747,10 @@ export default function Home () {
                         data-productid={8930938978542}
                         data-product-id={8930938978542}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -12198,7 +12242,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8949833892078}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -12619,7 +12666,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8252642951406}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -12739,7 +12789,10 @@ export default function Home () {
                         data-productid={8252642951406}
                         data-product-id={8252642951406}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -13147,7 +13200,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8969049080046}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -13554,7 +13610,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8930983837934}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -13681,7 +13740,10 @@ export default function Home () {
                         data-productid={8930983837934}
                         data-product-id={8930983837934}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -14173,7 +14235,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8882906530030}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -14300,7 +14365,10 @@ export default function Home () {
                         data-productid={8882906530030}
                         data-product-id={8882906530030}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -14782,7 +14850,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8220670492910}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -14904,7 +14975,10 @@ export default function Home () {
                         data-productid={8220670492910}
                         data-product-id={8220670492910}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -15563,7 +15637,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={7646916182254}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -15685,7 +15762,10 @@ export default function Home () {
                         data-productid={7646916182254}
                         data-product-id={7646916182254}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -16346,7 +16426,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={7672597414126}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -16468,7 +16551,10 @@ export default function Home () {
                         data-productid={7672597414126}
                         data-product-id={7672597414126}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -17127,7 +17213,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8931041542382}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -17254,7 +17343,10 @@ export default function Home () {
                         data-productid={8931041542382}
                         data-product-id={8931041542382}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -17738,7 +17830,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8727475486958}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -17865,7 +17960,10 @@ export default function Home () {
                         data-productid={8727475486958}
                         data-product-id={8727475486958}
                         data-original-action="/cart/add"
-                        onsubmit="return false;"
+                         onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                       >
                         <input
                           type="hidden"
@@ -18357,7 +18455,10 @@ export default function Home () {
                           encType="multipart/form-data"
                           data-productid={8735471337710}
                           data-original-action="/cart/add"
-                          onsubmit="return false;"
+                           onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
                         >
                           <input
                             type="hidden"
@@ -21442,7 +21543,7 @@ export default function Home () {
               className="swiper-button-prev mod_half_product_image_UPFeSG_pagination_arrows swiper-button-disabled"
               aria-label="Previous slide"
               tabIndex={-1}
-              disabled=""
+             /* disabled=""*/
               aria-controls="swiper-wrapper-ce58651073cb3e262"
               aria-disabled="true"
             >
@@ -22719,13 +22820,16 @@ export default function Home () {
               id="klaviyo"
               action="#"
               target="_blank"
-              noValidate="novalidate"
+              noValidate={false}
               data-js-newsletter=""
               data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe"
               method="get"
               title="External Klaviyo link. Open in a new tab or window."
               data-original-action="//manage.kmail-lists.com/subscriptions/subscribe"
-              onsubmit="return false;"
+               onSubmit={(e) => {
+                            e.preventDefault();
+                            return false; // optional, e.preventDefault() already stops submission
+                          }}
             >
               <input type="hidden" name="g" defaultValue="VyfPYc" />
               <input
@@ -22734,7 +22838,7 @@ export default function Home () {
                 aria-label="Email Address"
                 type="email"
                 placeholder="Email Address"
-                required="true"
+                required= {true}
               />
               <div className="Button-container Footer-newsletter-submit-container">
                 <button
@@ -22992,7 +23096,7 @@ export default function Home () {
                   </a>
                 </p>
                 <p>
-                  <a href="" onclick="showDrawer(event)">
+               <a href="#" onClick={showDrawer}>
                     Cookie Preferences
                   </a>
                 </p>
@@ -23472,7 +23576,7 @@ export default function Home () {
                       className="Button u-pSize Button__dark Button__filled Button__fullWidth Button__large"
                       data-mode="default"
                       href="checkout.html"
-                      sca_handle_checkout=""
+                     /* sca_handle_checkout=""*/
                     >
                       Checkout
                       <span data-index={1} className="Button-hover-helper" />
@@ -24446,8 +24550,8 @@ export default function Home () {
     style={{
       height: "0px !important",
       width: "0px !important",
-      position: "fixed !important",
-      visibility: "hidden !important",
+     /* position: "fixed !important",
+      visibility: "hidden !important",*/
       overflow: "hidden !important",
       zIndex: "-100 !important",
       margin: "0px !important",
@@ -24465,7 +24569,7 @@ export default function Home () {
       style={{
         height: "0px !important",
         width: "0px !important",
-        visibility: "hidden !important"
+       /* visibility: "hidden !important" */
       }}
     />
     <iframe
@@ -24478,7 +24582,7 @@ export default function Home () {
       style={{
         height: "0px !important",
         width: "0px !important",
-        visibility: "hidden !important"
+       /* visibility: "hidden !important"*/
       }}
     />
   </div>
