@@ -1,3 +1,7 @@
+
+"use client"; // <-- must be the first line in the file
+
+import React from "react";
 import Image from "next/image";
 import  "./globals.css";
 import './home.css';
