@@ -6,11 +6,11 @@ const showDrawer = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     console.log("Drawer opened"); // Replace with actual drawer logic
   };
-  
+
 export default function Home () {
   return (
   <>
-  <div data-nosnippet="" className="osano-cm-window" dir="ltr">
+  <div  className="osano-cm-window" dir="ltr">
     {/**/}
     <div hidden={true} className="osano-visually-hidden">
       <span id="osano-cm-aria.newWindow">Opens in a new window</span>
