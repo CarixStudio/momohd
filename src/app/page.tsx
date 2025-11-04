@@ -3835,7 +3835,7 @@ export default function Home () {
                       className="Header-mega-menu-category js-category-selector swiper-slide"
                       style={{ marginRight: 48 }}
                     >
-                      Award Winners
+                      Aw
                     </a>
                   </div>
                 </div>
@@ -7212,7 +7212,7 @@ export default function Home () {
                     playsInline= {true}
                     loop= {true}
                     muted= {true} 
-                    src="assets/VIDEO-2025-10-15-21-39-13 (1).mp4"
+                    src= "./videos/VIDEO-2025-10-15-21-39-13.mp4"
                     aria-hidden="true"
                   />
                   <div
